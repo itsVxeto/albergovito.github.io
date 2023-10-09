@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&family=Mooli&family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --bgColor: #0f1216;
+    --bgColor2: #323946;
+    --txtColor: #fff;
+    --mainColor: #5017ac;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bgColor);
+    color: var(--txtColor);
+}
+
+/* Navbar */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 10%;
+    background: var(--bgColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.textLogo {
+    font-size: 2rem;
+    color: var(--txtColor);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navbar a{
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--txtColor);
+    margin-left: 4rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: .5s;
+    padding: 6px 20px;
+}
+
+.navbar a.active, .navbar a:hover span{
+    border-bottom: 2px solid #5017ac;
+    border-radius: 15px;
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.navbar a:hover {
+    color: #f6ecff
+}
+
+.navbar a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #5017ac;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navbar a:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+/* !TODO: fare sta roba */
+/* xl screen */
+
+@media screen and (max-width: 1280px){
+    .navbar a{
+        font-size: 1rem !important;
+        margin-left: 2rem !important;
+    }
+    .cite {
+        font-size: 1.4rem !important;
+        padding: -2rem 3rem;
+    }
+    .homeContent h3 {
+        font-size: 2.8rem !important;
+    }
+    .card {
+        width: 200px !important;
+        height: 166px !important;
+    }
+    .card i.fa-brands {
+        font-size: 8rem !important;
+    }
+    .card img {
+        width: 140px !important;
+    }
+    .card i.fa-solid {
+        font-size: 8rem !important;
+    }
+    .social a {
+        width: 3rem !important;
+        height: 3rem !important;
+        font-size: 1.4rem !important;
+        margin: 1rem 1.5rem 3rem 0 !important;
+    }
+    .paragraph p{
+        display: flex !important;
+        justify-content: left !important;
+    }
+}
+
+/* lg screen */
+
+@media screen and (max-width: 1024px) {
+    .homeContent h3 {
+        font-size: 2.4rem !important;
+    }
+    .navbar a{
+        font-weight: 500;
+        font-size: 1rem;
+        color: var(--txtColor);
+        letter-spacing: 0.5px;
+        position: relative;
+        transition: .5s;
+        padding: 6px 10px;
+    }
+    .homeImg img {
+        display: none !important    ;
+    }
+    section.home {
+        min-height: 70vh !important;
+        padding: 15% 9%;
+    }
+}
+
+/* md screen */
+
+@media screen and (max-width: 768px) {
+    .navbar a{
+        font-weight: 500;
+        font-size: 1rem;
+        color: var(--txtColor);
+        letter-spacing: 0.5px;
+        position: relative;
+        transition: .5s;
+        padding: 6px 1px;
+    }
+    .card {
+        width: 160px !important;
+        height: 132px !important;
+    }
+    .card i.fa-brands {
+        font-size: 6rem !important;
+    }
+    .card img {
+        width: 110px !important;
+    }
+    .card i.fa-solid {
+        font-size: 6rem !important;
+    }
+    .aboutContent h2, .hobbyContent h2, .hobbyContent h2, .hobbyFavourite h2 {
+        font-size: 1.6rem !important;
+    }
+    .homeContent h3 {
+        font-size: 2rem !important;
+    }
+    .cite {
+        font-size: 1rem !important;
+        padding: -3rem 1rem !important;
+    }
+    .homeContent h1{
+        font-size: 4.5rem !important;
+    }
+    .social a {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        font-size: 1.4rem !important;
+        margin: 0.6rem 1.5rem 0.5rem 0 !important;
+    }
+}
+/* sm screen */
+
+@media (max-width: 640px) {
+    .homeContent h3 {
+        font-size: 1.6rem !important;
+    }
+    .navbar a{
+        display: none;
+    }
+    .textLogo {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center ;
+    }
+    .header {
+        display: block;
+    }
+    .card {
+        width: 96 !important;
+        height: 100px !important;
+    }
+    .card i.fa-brands {
+        font-size: 4rem !important;
+    }
+    .card img {
+        width: 80px !important;
+    }
+    .card i.fa-solid {
+        font-size: 4.5rem !important;
+    }
+    .homeContent h1{
+        font-size: 3.8rem !important;
+    }
+    h3 span {
+        font-size: 2.5rem !important;
+    }
+    section {
+        min-height: 10vh !important;
+        padding: 5% 9% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .homeContent h3 {
+        font-size: 1.6rem !important;
+    }
+    .card {
+        width: 96 !important;
+        height: 100px !important;
+    }
+    .card i.fa-brands {
+        font-size: 4rem !important;
+    }
+    .card img {
+        width: 80px !important;
+    }
+    .card i.fa-solid {
+        font-size: 4.5rem !important;
+    }
+    .homeContent h1{
+        font-size: 3.8rem !important;
+    }
+    h3 span {
+        font-size: 2.5rem !important;
+    }
+    .social a {
+        margin: 0.6rem 0 2px 0 !important;
+    }
+    .cite {
+        display: none;
+    }
+    .paragraph p{
+        font-size: 1rem !important;
+    }
+}
+
+
+/* .navbar a::after{
+    content: '';
+    position: absolute;
+    background-color: var(--mainColor);
+    height: 4px;
+    width: 0%;
+    left: 0;
+    bottom: -3px;
+    transition: all 0.3s ease-in;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+} */
+
+#menuIcon {
+    font-size: 3.6rem;
+    cursor: pointer;
+    color: var(--txtColor);
+    display: none;
+    
+}
+
+/* section Home*/
+
+section.home {
+    min-height: 100vh;
+    padding: 15% 9%;
+}
+
+
+
+h3 span.typing {
+    position: relative;
+    color: var(--mainColor);
+    font-family: cursive;
+    font-size: 3rem;
+}
+
+/* h3 span.typing::before {
+    content: ' ';
+    position: absolute;
+    height: 3rem;
+    width: 3px;
+    background: var(--mainColor);
+    transform: translateY(30%);
+    animation: blink 0.7 infinite;
+}
+
+h3 span.typing .stop-blinking::before {
+    animation: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+} */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContent h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.homeContent h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.homeContent img {
+    width: 50vw;
+}
+
+#vito {
+    margin: -5rem 0 0 7rem;
+}
+
+img {
+    opacity: 0.75;
+    border-radius: 10%;
+}
+
+
+.homeContent p {
+    line-height: 8rem;
+    font-size: 1.6rem;
+}
+
+.social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: transparent;
+    border: .2rem solid var(--mainColor);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--mainColor);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social a:hover {
+    background: var(--mainColor);
+    color: var(--bgColor2);
+    box-shadow: 0 0 1rem var(--mainColor);
+}
+
+/* Section About */
+
+section.About {
+    min-height: 100vh;
+    padding: -10rem 0 10rem;
+    background-color: var(--bgColor);
+    /* background-color: var(--bgColor); */
+}
+
+.aboutContent h2{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 10% 0 3rem;
+}
+
+.paragraph p{
+    display: flex;
+    justify-content: center;
+    font-size: 1.35rem;
+    line-height: 2;
+}
+
+h2 span {
+    color: var(--mainColor);
+    padding-left: 0.7rem;
+}
+
+/* Section Hobby */
+.hobbyContent h2{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 10% 0 3rem;
+}
+
+/* Section Favourites */
+.hobbyFavourite h2{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 10% 0 3rem;
+}
+
+.unshow {
+    display: none;
+}
+
+/* loader  */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgColor);
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: '';
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: var(--mainColor);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    } to {
+        transform: rotate(1turn) ;
+    }
+}
+
+/* cards languages */
+.languages {
+    padding: 3rem 10%;    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Hobbies {
+    padding: 3rem 10%;    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Favourites {
+    padding: 3rem 10%;    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#cards {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: max-content;
+    width: calc(100%-20px);
+}
+
+.card {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    height: 208px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 250px;
+}
+
+.card::before {
+    background: radial-gradient(800px circle at 100px 100px, rgba(255, 255, 255, 0.06), transparent 40%);
+    border-radius: inherit;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.card i.fa-brands {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 10rem;
+
+}
+
+.card i.fa-solid {
+    color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+}
+
+.card img {
+    width: 150px;
+}
+
+.card:hover {
+    transition: 0.7s;
+    background-color: #5017ac;
+}
