@@ -596,9 +596,9 @@ h2 span {
 }
 
 .card .WIP {
-    rotate: 10deg !important;
+    rotate: 10deg;
     text-align: center;
-    font-style: italic !important;
+    font-style: italic;
     font-size: 2.25rem;
 }
 
@@ -623,7 +623,7 @@ tbody tr td{
     display: flex;
     justify-content: center;
     font-size: 2rem;
-    margin: 3.5% 0 0 0;
+    margin: 6.5% 0 0 0;
 }
 
 .rubiksTxt p{
