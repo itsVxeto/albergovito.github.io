@@ -596,9 +596,9 @@ h2 span {
 }
 
 .card .WIP {
-    rotate: 10deg;
+    rotate: 10deg !important;
     text-align: center;
-    font-style: italic;
+    font-style: italic !important;
     font-size: 2.25rem;
 }
 
